@@ -16,17 +16,17 @@ public class InsertUserDetails {
 	
 	public static String query = null;
 
-	    public static int insertUserInfo(String email, String name) throws SQLException {
+	    public static int insertUserInfo(String name, String emailID) throws SQLException {
 	    	int affectedrows = 0;
 	    	//Connection conn =null;	    	
-	    	 query = "INSERT INTO UserINFO(email,name) VALUES(?,?)";
+	    	 query = "INSERT INTO PERSON(NAME,EMAILID) VALUES(?,?)";
 	    	JDBC_Connection jdbcConnection = new JDBC_Connection();
 			
 			try(Connection conn = jdbcConnection.connect();
 					PreparedStatement pstmt = conn.prepareStatement(query)){
 				conn.setAutoCommit(false);
-				pstmt.setString(1,email);
-			    pstmt.setString(2, name);
+				pstmt.setString(1,name);
+			    pstmt.setString(2, emailID);
 			    
 			    //System.out.println("query: " + query);
 			    affectedrows = pstmt.executeUpdate();

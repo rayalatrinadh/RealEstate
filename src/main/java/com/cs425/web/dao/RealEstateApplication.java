@@ -18,7 +18,6 @@ public class RealEstateApplication {
 				+ "6.Book Property(Renter only)\n" + "7.Register card Details\n" + "8.Edit card Details\n"
 				+ "9.View Property\n" + "10.View User Information\n" + "11.view Renter Information\n"
 				+ "12.view Agent Information\n"
-				+ "13.view Booking Details\n"
 				+"Enter 0 to exit application\n");
 
 		System.out.println("Please choose option from menu : ");
@@ -176,58 +175,7 @@ public class RealEstateApplication {
 			}
 			break;
 			
-		case 6:
-			long BookingID = 0;
-			String UserID_R = null;
-			String UserID_Agnt = null;
-			long CCID = 0;
-			long PropertyID = 0;
-			Date Start_Date = null;
-			Date End_Date = null;
 			
-			System.out.println("long -> Please Enter BookingID : ");
-			BookingID = input.nextLong();
-			System.out.println("String -> Please Enter renterUserID : ");
-			UserID_R = input.next();
-			System.out.println("String -> Please Enter agentUserID : ");
-			UserID_Agnt = input.next();
-			System.out.println("long -> Please Enter CCID : ");
-			CCID = input.nextLong();
-			System.out.println("long -> Please Enter propertyID : ");
-			PropertyID = input.nextLong();
-			
-			
-			System.out.println("Enter Start_Date in the format yyyy-MM-dd:");
-			String dateString2 = input.next();
-
-			SimpleDateFormat dateFormat2 = new SimpleDateFormat("yyyy-MM-dd");
-	        try {
-	            java.util.Date utilDate = dateFormat2.parse(dateString2);
-	            Start_Date = new java.sql.Date(utilDate.getTime());
-	        } catch (ParseException e) {
-	            System.out.println("Invalid date format");
-	        }
-		
-			
-	        System.out.println("Enter End_Date in the format yyyy-MM-dd:");
-			String dateString3 = input.next();
-
-			SimpleDateFormat dateFormat3 = new SimpleDateFormat("yyyy-MM-dd");
-	        try {
-	            java.util.Date utilDate = dateFormat3.parse(dateString3);
-	            End_Date = new java.sql.Date(utilDate.getTime());
-	        } catch (ParseException e) {
-	            System.out.println("Invalid date format");
-	        }
-	        
-	        
-	        
-	        
-			BookingDao.insertBookingDetails(BookingID, UserID_R, UserID_Agnt, CCID,PropertyID, Start_Date, End_Date);
-			
-			
-			
-			break;
 			
 		case 7:
 			int cardUserID = 0;
@@ -273,7 +221,7 @@ public class RealEstateApplication {
 			AgentRegistrationDao.agentDetailsFetch();
 			break;
 		case 13:
-			BookingDao.viewBookingDetails();
+			
 			
 			break;
 			
@@ -288,7 +236,6 @@ public class RealEstateApplication {
 				+ "6.Book Property(Renter only)\n" + "7.Register card Details\n" + "8.Edit card Details\n"
 				+ "9.View Property\n" + "10.View User Information\n" + "11.view Renter Information\n"
 				+ "12.view Agent Information\n"
-				+ "13.view Booking Details\n"
 				+ "Enter 0 to exit application\n");
 		 userInput = input.nextInt();
 		

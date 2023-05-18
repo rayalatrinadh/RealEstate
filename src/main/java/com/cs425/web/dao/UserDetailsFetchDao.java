@@ -12,7 +12,28 @@ public class UserDetailsFetchDao {
 	public static ArrayList<String> primaryKeyEmailList = new ArrayList<>();
 	public static String query = null;
 
-	
+	/*
+	 * public static void userDetailsFetch() throws SQLException { query =
+	 * "SELECT * FROM UserInfo";
+	 * 
+	 * JDBC_Connection jdbcConnection = new JDBC_Connection();
+	 * 
+	 * try (Connection conn = jdbcConnection.connect(); PreparedStatement pstmt =
+	 * conn.prepareStatement(query)) { conn.setAutoCommit(false); ResultSet rs =
+	 * pstmt.executeQuery(); conn.commit();
+	 * System.out.println("User Record(s) Fetched Successfully\n"); while
+	 * (rs.next()) {
+	 * 
+	 * String name = rs.getString("Name"); String email = rs.getString("Email");
+	 * 
+	 * String formattedName = String.format("%-30s", "Name: " + name); String
+	 * formattedEmail = String.format("%-30s", "Email: " + email);
+	 * 
+	 * System.out.println(formattedName + formattedEmail); } if (!conn.isClosed()) {
+	 * // System.out.println("connect is going to close..."); conn.close(); //
+	 * System.out.println("connection closed in InsertUserDetails"); } } catch
+	 * (SQLException ex) { ex.printStackTrace(); } }
+	 */
 	
 	public static void userDetailsFetch() throws SQLException {
 	    String query = "SELECT * FROM UserInfo";

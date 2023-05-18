@@ -25,7 +25,7 @@ public class PersonDao {
 	 public static  List<Person> getPersonDetailsFromDB() throws SQLException {
 		    List<Person> personsList = new ArrayList<Person>();
 		    int recordsCount = 0;
-	    	String query = "SELECT * FROM UserINFO";
+	    	String query = "SELECT * FROM PERSON";
 	    	JDBC_Connection jdbcConnection = new JDBC_Connection();
 			
 			try(Connection conn = jdbcConnection.connect();
@@ -34,9 +34,9 @@ public class PersonDao {
 							){
 				
 				while (rs.next()) {
-					System.out.println("\n name : "+rs.getString("name") + " , emailID : " + rs.getString("email"));
-					String name = rs.getString("email");
-					String emailID = rs.getString("name");
+					System.out.println("\n name : "+rs.getString("name") + " , emailID : " + rs.getString("emailID"));
+					String name = rs.getString("name");
+					String emailID = rs.getString("emailID");
 
 //					temp.put("name", rs.getString("name"));
 //					temp.put("emailID", rs.getString("emailID"));

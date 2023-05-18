@@ -42,7 +42,7 @@ td {
 	}
 </script>
 
-<!-- <div>
+<div>
 	<form name="myForm" action="" method="post"
 		onsubmit="return onSubmitForm();">
 		<table id="myTable">
@@ -70,7 +70,7 @@ td {
 		</table>
 		<input type="hidden" name="tableData" id="tableData" value="">
 	</form>
-</div> -->
+</div>
 
 <div>
 	<form action="getPersonInfoFromDBAjax" method="post">

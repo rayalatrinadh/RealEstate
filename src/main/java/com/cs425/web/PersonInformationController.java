@@ -32,7 +32,7 @@ public class PersonInformationController {
 		System.out.println(person.getName());
 		System.out.println(person.getEmailID());
 		InsertUserDetails details = new InsertUserDetails();
-		details.insertUserInfo(emailId,name);
+		details.insertUserInfo(name, emailId);
 		//return "welcome";
 		//return "ShowInstructor";  
 		 return "userRegisteration";
